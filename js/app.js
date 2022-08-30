@@ -8,7 +8,15 @@ const loadPhones=async(searchText)=>{
 const displayPhones=phones=>{
     const phoneContainer=document.getElementById('phone-container');
     phoneContainer.textContent=` `;
-    phones=phones.slice(0,10)
+    // showAll part start
+    const showAll=document.getElementById('show-all');
+    if(phones.length>10){
+      phones=phones.slice(0,10);
+     
+      showAll.classList.remove('d-none');
+    }else{
+      showAll.classList.add('d-none');
+    }
     // show warning
     const noPhone=document.getElementById('no-found-message');
     if(phones.length===0){
