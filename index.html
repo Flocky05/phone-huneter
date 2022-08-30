@@ -12,9 +12,9 @@
     </header>
     <main class="container">
         <section>
-            <div class="mb-3 w-50">
-                <input id="search-field" type="text" class="form-control" id="exampleFormControlInput1" placeholder="search Your phone">
-                <button id="btn-search" class="btn btn-danger">search</button>
+            <div class="mb-3 w-50 m-auto">
+                <input id="search-field" type="text" class="form-control " id="exampleFormControlInput1" placeholder="search Your phone">
+                <button id="btn-search" class="btn btn-danger m-auto">search</button>
               </div>
         </section>
         <section>
@@ -22,7 +22,19 @@
                 <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
                     
                   </div>
+                  <div id="no-found-message" class="mt-3px d-none">
+                    <h3 class="text-warning ">
+                            No phone found the databasae.Please search new fild.
+                    </h3>
+                  </div>
             
+        </section>
+        <section id="loader" class="d-none">
+          <div style="height: 500px;" class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-success" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
         </section>
     </main>
    
